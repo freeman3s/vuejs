@@ -11,7 +11,11 @@
 </head>
 <body>
 	<div id="root" class="container">
-		<message title="Hello World" body="Lorem ipsum dolor sit amet."></message>
+		<modal v-if="showModal" @close="showModal = false">
+			<p>We insert any text here.</p>
+		</modal>
+
+		<button @click="showModal = true">Show Modal</button>
 	</div>
 	
 	<script src="https://unpkg.com/vue@2.3.4"></script>
